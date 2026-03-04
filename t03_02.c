@@ -9,9 +9,7 @@ int main() {
     // --- Validasi Input n ---
     // Memastikan n adalah bilangan bulat positif
     do {
-        printf("Masukkan jumlah bilangan (n > 0): ");
         if (scanf("%d", &n) != 1 || n <= 0) {
-            printf("Input tidak valid. Harap masukkan bilangan bulat positif.\n");
             // Membersihkan buffer input jika input tidak valid
             while (getchar() != '\n');
         }
@@ -20,7 +18,6 @@ int main() {
     // Alokasikan array untuk menyimpan n bilangan
     int *numbers = (int *)malloc(n * sizeof(int));
     if (numbers == NULL) {
-        printf("Alokasi memori gagal.\n");
         return 1; // Keluar dengan kode error
     }
 
@@ -29,15 +26,14 @@ int main() {
     int max_val = INT_MIN;
     int num;
 
-    printf("Masukkan %d bilangan bulat antara -100 dan 100:\n", n);
+    printf("%d", n);
 
     for (int i = 0; i < n; i++) {
         // --- Validasi Input Bilangan ---
         // Memastikan bilangan berada dalam rentang -100 sampai 100
         do {
-            printf("Bilangan ke-%d: ", i + 1);
+            printf("%d: ", i + 1);
             if (scanf("%d", &num) != 1 || num < -100 || num > 100) {
-                printf("Input tidak valid. Harap masukkan bilangan bulat antara -100 dan 100.\n");
                 // Membersihkan buffer input jika input tidak valid
                 while (getchar() != '\n');
             }
@@ -56,7 +52,6 @@ int main() {
         }
     }
 
-    printf("--- Hasil Program ---\n");
     printf("Nilai terkecil: %d\n", min_val);
     printf("Nilai terbesar: %d\n", max_val);
     
@@ -65,7 +60,6 @@ int main() {
     double min_avg_consecutive = DBL_MAX; // Inisialisasi dengan nilai double terbesar
     
     if (n < 2) {
-        printf("Tidak ada pasangan bilangan berurutan untuk dihitung rata-ratanya (n harus minimal 2).\n");
     } else {
         for (int i = 0; i < n - 1; i++) {
             // Hitung rata-rata pasangan berurutan
@@ -76,10 +70,9 @@ int main() {
                 min_avg_consecutive = current_avg;
             }
         }
-        printf("Rata-rata terkecil dari setiap 2 bilangan berurutan: %.2f\n", min_avg_consecutive);
+        printf(" %.2f\n", min_avg_consecutive);
     }
 
-    printf("--- Akhir Program ---\n");
 
     free(numbers); // Bebaskan memori yang dialokasikan untuk array
     return 0;

@@ -7,9 +7,7 @@ int main() {
     // --- Validasi Input n ---
     // Memastikan n adalah bilangan bulat positif
     do {
-        printf("Masukkan jumlah bilangan (n > 0): ");
         if (scanf("%d", &n) != 1 || n <= 0) {
-            printf("Input tidak valid. Harap masukkan bilangan bulat positif.\n");
             // Membersihkan buffer input jika input tidak valid
             while (getchar() != '\n');
         }
@@ -21,7 +19,7 @@ int main() {
     int max_val = INT_MIN;
     int num;
 
-    printf("Masukkan %d bilangan bulat antara -100 dan 100:\n", n);
+    printf("%d", n);
 
     for (int i = 0; i < n; i++) {
         // --- Validasi Input Bilangan ---
@@ -29,7 +27,6 @@ int main() {
         do {
             printf("Bilangan ke-%d: ", i + 1);
             if (scanf("%d", &num) != 1 || num < -100 || num > 100) {
-                printf("Input tidak valid. Harap masukkan bilangan bulat antara -100 dan 100.\n");
                 // Membersihkan buffer input jika input tidak valid
                 while (getchar() != '\n');
             }
@@ -46,10 +43,7 @@ int main() {
         }
     }
 
-    printf("--- Hasil Program ---\n");
-    printf("Nilai terkecil: %d\n", min_val);
-    printf("Nilai terbesar: %d\n", max_val);
-    printf("--- Akhir Program ---\n");
-
+    printf(" %d\n", min_val);
+    printf("%d\n", max_val);
     return 0;
 }
