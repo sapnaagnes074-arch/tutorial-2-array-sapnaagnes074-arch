@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <limits.h> // Untuk INT_MAX dan INT_MIN
 #include <float.h>  // Untuk DBL_MAX
-#include <stdlib.h> // Untuk malloc dan free
+#include <stdlib.h> // Untuk malloc dan free.
 
 int main() {
     int n;

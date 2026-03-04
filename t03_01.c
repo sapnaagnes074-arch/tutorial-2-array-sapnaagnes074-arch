@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <limits.h> // Untuk INT_MAX dan INT_MIN
+#include <limits.h> // Untuk INT_MAX dan INT_MIN.
 
 int main() {
     int n;

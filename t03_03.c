@@ -43,7 +43,7 @@ int main() {
             min_val = num;
         }
 
-        // Memperbarui nilai maksimum
+        // Memperbarui nilai maksimum.
         if (num > max_val) {
             max_val = num;
         }
